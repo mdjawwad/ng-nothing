@@ -1,0 +1,298 @@
+.all-in-conatiner {
+  padding: 3rem 1rem;
+  width: 80%;
+  height: 150vh;
+  margin: 0 auto;
+}
+.all-in-conatiner h1 {
+  font-size: 4.5rem;
+  margin: 2rem 0;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  height: 70%;
+}
+
+.column {
+  flex: 20%;
+  max-width: 40%;
+  padding: 5px 8px;
+}
+.card {
+  position: relative;
+}
+
+.column .card span {
+  color: white;
+  left: 2rem;
+  top: 2rem;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  letter-spacing: -0.8px;
+  position: absolute;
+  width: 70%;
+}
+
+.column .card p {
+  color: white;
+  left: 2rem;
+  top: 2rem;
+
+  font-size: 1.3rem;
+  letter-spacing: -0.8px;
+  position: absolute;
+  width: 70%;
+}
+.column .card h6 {
+  color: white;
+  left: 2rem;
+  top: 5.5rem;
+  line-height: 3.5rem;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  letter-spacing: -0.8px;
+  position: absolute;
+}
+.c2 span,
+.c4 span {
+  color: rgb(0, 0, 0) !important;
+}
+
+.c9 span:last-child {
+  line-height: 1.2rem;
+  font-weight: lighter !important;
+}
+.c7 span {
+  top: 8rem !important;
+  font-size: 1.8rem !important;
+}
+.c7 span:last-child {
+  top: 10.5rem !important;
+  font-weight: lighter !important;
+  font-size: 1.3rem !important;
+}
+.c5 span {
+  top: 4rem !important;
+  font-size: 2.5rem !important;
+}
+
+.c8 span {
+  color: black !important;
+  top: 1.5rem !important;
+  line-height: 2.2rem;
+
+  font-size: 2.8rem !important;
+}
+.c8 span:last-child {
+  color: black !important;
+  line-height: 1.2rem;
+
+  top: 7rem !important;
+  font-weight: lighter !important;
+  font-size: 1.3rem !important;
+}
+.c4 span {
+  top: 7rem !important;
+  font-size: 2.3rem !important;
+}
+.c4 span:last-child {
+  top: 10rem !important;
+  font-weight: lighter !important;
+  font-size: 1.3rem !important;
+}
+.c6 span {
+  top: 2.5rem !important;
+  font-size: 3.5rem !important;
+}
+.c6 span:last-child {
+  top: 6.5rem !important;
+  font-weight: lighter !important;
+  font-size: 1.3rem !important;
+}
+.column .card span:last-child {
+  color: white;
+  left: 2rem;
+  top: 10rem;
+
+  font-size: 1.3rem;
+  letter-spacing: -0.8px;
+  position: absolute;
+}
+
+.column img {
+  border-radius: 20px;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* @media (max-width: 1300px) {
+  .all-in-conatiner{
+    width: 90% !important;
+  }
+ 
+ 
+} */
+
+/* @media (max-width: 800px) {
+  .column {
+    flex: 40%;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 50%;
+    max-width: 100%;
+  }
+} */
+
+@media screen and (max-width: 737px) {
+  .all-in-conatiner {
+   
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    width: 100%;
+  }
+  .all-in-conatiner h1{
+    
+      width: 100%;
+      font-size: 3.5rem;
+      margin-left: 2rem;
+  
+     
+  }
+  .row {
+ 
+    padding: 0;
+    margin: 0;
+ 
+  }
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .column .card h6 {
+    top: 6rem;
+    line-height: 1.9rem;
+
+    font-size: 2.2rem;
+  }
+
+  .column .card p {
+    top: 2rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  .c9 span {
+    top: 2rem !important;
+    font-size: 1.8rem !important;
+  }
+  .c9 span:last-child {
+    top: 6.5rem !important;
+    font-weight: lighter !important;
+    font-size: 1.3rem !important;
+  }
+  .c3 span {
+    top: 2rem !important;
+    font-size: 1.8rem !important;
+  }
+  .c3 span:last-child {
+    top: 6.5rem !important;
+    font-weight: lighter !important;
+    font-size: 1.3rem !important;
+  }
+  .c2 span {
+    top: 2rem !important;
+    font-size: 1.8rem !important;
+  }
+  .c2 span:last-child {
+    top: 6.5rem !important;
+    font-weight: lighter !important;
+    font-size: 1.3rem !important;
+  }
+  
+  .c7 span {
+    top: 2rem !important;
+    font-size: 1.7rem !important;
+  }
+  .c7 span:last-child {
+    top: 6.5rem !important;
+    font-weight: lighter !important;
+    font-size: 1rem !important;
+  }
+  .c5 span {
+    top: 2.5rem !important;
+    font-size: 2rem !important;
+  }
+
+  .c8 span {
+    color: black !important;
+    top: 1rem !important;
+    line-height: 1.7rem;
+
+    font-size: 1.8rem !important;
+  }
+  .c8 span:last-child {
+    color: black !important;
+    line-height: 1.2rem;
+
+    top: 5rem !important;
+    font-weight: lighter !important;
+    font-size: 1rem !important;
+  }
+  .c4 span {
+    top: 5.2rem !important;
+    font-size: 1.3rem !important;
+  }
+  .c4 span:last-child {
+    top: 7rem !important;
+    font-size: 1rem !important;
+  }
+  .c6 span {
+    top: 1.5rem !important;
+    font-size: 2.5rem !important;
+  }
+  .c6 span:last-child {
+    top: 4.5rem !important;
+    font-size: 1.3rem !important;
+  }
+  .c10 span {
+    top: 2rem !important;
+    font-size: 1.8rem !important;
+  }
+  .c10 span:last-child {
+    top: 6.5rem !important;
+    font-weight: lighter !important;
+    font-size: 1.3rem !important;
+  }
+  .column .card span:last-child {
+    color: white;
+    left: 2rem;
+    top: 10rem;
+
+    font-size: 1.3rem;
+    letter-spacing: -0.8px;
+    position: absolute;
+  }
+
+  .column img {
+    border-radius: 20px;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+}

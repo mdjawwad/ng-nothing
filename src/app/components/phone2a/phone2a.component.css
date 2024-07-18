@@ -1,0 +1,355 @@
+.phone-2a-conatiner {
+  width: 100%;
+
+  height: 70vh;
+  margin-top: 4rem;
+}
+.phone-2a-conatiner .wrapper {
+  display: flex;
+  width: 100%;
+  padding: 0 8rem;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background: #000;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .phonsImg {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.wrapper .phonsImg img {
+  margin-left: 15rem;
+  width: 900px !important;
+}
+.wrapper .phonsImg img:last-child {
+  margin-left: 15rem;
+  width: 447px !important;
+}
+.des1 {
+  width: 400px !important;
+  color: white;
+  height: 100%;
+  display: none;
+}
+.des1 h1 {
+  font-size: 4rem;
+}
+
+.des1 h4 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+.des1 h6 {
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin: 2rem 0;
+}
+.des1 span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text {
+  font-family: nothing;
+}
+.text span {
+  color: white;
+  font-size: 8rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.allIn {
+  height: 130vh;
+  overflow: hidden;
+}
+.gopro-container {
+  width: 100%;
+
+  position: relative;
+}
+.gopro-container #go-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  z-index: 9;
+  transition: all 0.3s;
+}
+
+video {
+  width: 100%;
+}
+.video {
+  display: flex;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: white;
+}
+.video-text h1 {
+  font-size: 4rem;
+}
+.video-text h4 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  width: 400px;
+}
+
+#shopbar {
+  width: 100%;
+  height: 80px;
+  background: white;
+  position: fixed;
+  transition: bottom 0.3s;
+  bottom: 0;
+}
+
+.shop-container {
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.colors h5 {
+  font-size: 1.3rem;
+  margin-right: 2rem;
+}
+.color1 {
+  width: 40px;
+  margin-right: 0.5rem;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.812);
+  border-radius: 50%;
+  outline: rgb(59, 51, 51);
+  border: rgb(255, 0, 0) solid 1px;
+  padding: 1px;
+}
+.color2 {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border: rgb(0, 0, 0) solid 1px;
+  background-color: rgb(24, 16, 49);
+  border-radius: 50%;
+  outline: white;
+}
+.color3 {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(201, 201, 201);
+  border: rgb(133, 133, 133) solid 1px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: white;
+}
+
+.color4 {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(23, 17, 93);
+  border: rgb(133, 133, 133) solid 1px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: white;
+}
+
+.rate {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+}
+.rate span {
+  font-size: 1.5rem;
+}
+
+.rate button {
+  width: 300px;
+  height: 60px;
+  margin-left: 2rem;
+  background: red;
+  outline: none;
+
+  border: none;
+  border-radius: 30px;
+}
+.rate button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .phone-2a-conatiner .wrapper {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+  .text {
+    position: absolute;
+    left: 0;
+  }
+  .text span {
+    font-size: 6rem !important;
+  }
+
+  .img-1 {
+    height: 100%;
+  }
+  .img-1 img {
+    margin-left: 0 !important ;
+  }
+
+  .des1 h4 {
+    margin: 0.5rem 0;
+  }
+  .des1 h6 {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 737px) {
+
+
+ .phone-2a-conatiner .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0 !important;
+ 
+
+  }
+ .phone-2a-conatiner {
+    height: inherit !important;
+  }
+  .text {
+    position: absolute;
+    left: 0;
+    top: 10rem;
+  }
+  .phone-des .des1, .des2,.des3,.des4{
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  .text span {
+    font-size: 3rem !important;
+  }
+  .wrapper {
+    height: inherit;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .phonsImg {
+    width: 100% !important;
+  }
+  .phonsImg img {
+    margin-left: 0 !important;
+  }
+
+
+
+ 
+
+  .gopro-container {
+    height: 100vh;
+   
+  }
+  .video {
+    width: 100% !important;
+    overflow: hidden;
+    padding: 0 2rem;
+    justify-content: center;
+    background-color: #000;
+    height: 100% !important;
+  }
+  .video video {
+   
+    width:  1000px !important;
+    height: 100% !important;
+  }
+.video-text{
+  left: 50%;
+  top: 20%;
+}
+
+#shopbar {
+  height: 140px;
+}
+
+.colors {
+  width: 50%;
+  display: flex;
+  height: 100%;
+ 
+  margin-top: -5rem;
+ 
+ 
+
+
+ 
+}
+.color1,.color2,.color3,.color4{
+  margin: 0;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+
+.colors h5 {
+  display: none;
+}
+ 
+
+.rate {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+}
+.rate span {
+  font-size: 1.5rem;
+  margin-top: -5rem;
+}
+
+.rate button {
+  width: 280px;
+
+  position: absolute;
+  bottom: 0.5rem;
+  left: 10%;
+}
+.rate button a {
+  font-size: 1rem;
+}
+}

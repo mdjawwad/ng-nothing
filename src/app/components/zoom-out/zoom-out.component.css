@@ -1,0 +1,82 @@
+.page {
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 10rem;
+  justify-content: center;
+  background: #000;
+}
+.arrow {
+  height: 320px;
+  margin-left: 9rem;
+
+  width: 80%;
+}
+h1 {
+  width: 70%;
+  margin: 1rem 0;
+  font-size: 4.6rem;
+  color: white;
+}
+h3 {
+  width: 50%;
+
+  font-size: 1.6rem;
+  color: white;
+}
+
+.img {
+  /* background-color: rgb(45, 95, 24); */
+
+  background-image: url("https://in.nothing.tech/cdn/shop/files/Great_Shot_Front_Camera_1_2889e732-7774-45fd-b8e8-d6c3026925cf_1901x.png?v=1709461498");
+  width: 1500px;
+
+  height: 100%;
+  background-size: 1500px;
+
+  background-repeat: no-repeat;
+  background-position: top;
+
+  animation-range: cover 0% cover 100%;
+  animation: the-animation alternate-reverse;
+  animation-timeline: view();
+  animation-iteration-count: 2;
+}
+
+@keyframes the-animation {
+  to {
+    background-size: 250px;
+  }
+}
+
+
+@media screen and (max-width: 737px) {
+
+  .page{
+    padding: 0 2rem ;
+     height: 100vh;
+  }
+  .arrow
+  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .arrow h1{
+    width: 100%;
+    font-size: 3.5rem;
+
+  }
+  .arrow h3{
+    width: 100%;
+    font-size: 1.5rem;
+
+  }
+  .img{
+    width: 350px !important;
+    background-size:  350px !important;
+ 
+ 
+  }
+}

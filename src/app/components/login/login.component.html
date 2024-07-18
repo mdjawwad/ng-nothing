@@ -1,0 +1,58 @@
+@if (isLoginView!) {
+
+<div class="login-container">
+  <div class="img">
+    <img
+      src="https://in.nothing.tech/cdn/shop/files/Nothing_Login_2330x1438_2.png?v=1659345784"
+      alt=""
+    />
+  </div>
+  <div class="login-inner">
+    <h1>LOGIN</h1>
+    <input type="email" name="email"   [(ngModel)]="loginObj.email"  placeholder="Email address" />
+    <input type="password"  name="password"   [(ngModel)]="loginObj.password"  placeholder placeholder="Password" />
+    <p>Forgot your password? <a href=""> Click here</a></p>
+    <button (click)="onLogin()">Confirm</button>
+    <p>
+      Dont have an account?
+      <a href="" (click)="isLoginView = false">Create One</a>
+    </p>
+  </div>
+</div>
+}@else{
+<div class="signup-container">
+  <div class="img">
+    <img
+      src="https://in.nothing.tech/cdn/shop/files/Nothing_Login_2330x1438_2.png?v=1659345784"
+      alt=""
+    />
+  </div>
+  <div class="login-inner">
+    <h1>SING UP</h1>
+    <input type="text" name="username"   [(ngModel)]="signupOBJ.username"   placeholder="Username" />
+    <input type="email"  name="email"   [(ngModel)]="signupOBJ.email"   placeholder="Email address" />
+    <input type="password"  name="password"   [(ngModel)]="signupOBJ.password"   placeholder="Password" />
+    <div class="checkbox c-1">
+      <input type="checkbox"  />
+
+      <p>
+        You have read and agree to the terms in our
+        <a href="">privacy policy</a>
+      </p>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox"   />
+
+      <p>You consent to receiving NOTHING marketing communication</p>
+    </div>
+
+    <button (click)="onSignup()">Confirm</button>
+
+    <p>By signing in, you agree to our <a href="">privacy policy</a></p>
+    <p>
+      Already have an account?
+      <a href="" (click)="isLoginView = true"  >Sign in</a>
+    </p>
+  </div>
+</div>
+}

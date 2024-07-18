@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: nothing;
+  src: url(assets/font/nothing-font-5x7.ttf) format("trueType");
+}
+
+body {
+  overflow-x: hidden;
+}
