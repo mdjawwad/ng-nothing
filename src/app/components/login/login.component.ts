@@ -24,12 +24,11 @@ export class LoginComponent {
     email: '',
     password: '',
   };
-  // // constructor(private nav: NavbarComponent) {}
+ 
   ngOnInit(): void {
-    const loginAccount: string = 'Account - Nothing India';
-
-    (document.querySelector('title') as HTMLElement).textContent = loginAccount;
   }
+ 
+ 
 
   onSignup() {
     const localData = localStorage.getItem('newUser');

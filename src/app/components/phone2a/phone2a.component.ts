@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CamaraViewComponent } from '../camara-view/camara-view.component';
 import { Phone2aAllInComponent } from '../phone2a-all-in/phone2a-all-in.component';
@@ -6,6 +6,7 @@ import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { ZoomOutComponent } from '../zoom-out/zoom-out.component';
 import { ImgGridComponent } from '../img-grid/img-grid.component';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-phone2a',
@@ -14,6 +15,7 @@ import { RouterLink } from '@angular/router';
     NavbarComponent,
     RouterLink,
     CamaraViewComponent,
+    CommonModule,
     ImgGridComponent,
     Phone2aAllInComponent,
     ImageSliderComponent,
@@ -22,31 +24,81 @@ import { RouterLink } from '@angular/router';
   templateUrl: './phone2a.component.html',
   styleUrl: './phone2a.component.css',
 })
-export class Phone2aComponent {
-  ngOnInit(): void {
-    document.addEventListener('DOMContentLoaded', () => {
-      // Hide all big images except the first one
-      const bigImages =
-        document.querySelectorAll<HTMLImageElement>('.phonsImg img');
-      bigImages.forEach((img, index) => {
-        if (index !== 0) (img as HTMLImageElement).style.display = 'none';
-      });
+export class Phone2aComponent implements AfterViewInit {
+  // autoplay video
+  @ViewChild('productVideo', { static: false })
+  productVideo!: ElementRef<HTMLVideoElement>;
 
-      // Add event listeners to small images
-      const smallImages =
-        document.querySelectorAll<HTMLImageElement>('.colors div');
-      smallImages.forEach((div, index) => {
-        div.addEventListener('click', () => {
-          bigImages.forEach((bigImg, bigIndex) => {
-            (bigImg as HTMLImageElement).style.display =
-              bigIndex === index ? 'block' : 'none';
-          });
-        });
+  ngAfterViewInit() {
+    const videoElement = this.productVideo.nativeElement;
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          videoElement.play();
+        } else {
+          videoElement.pause();
+        }
       });
-    });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    observer.observe(videoElement);
+  }
+
+  // product image change
+  images: {
+    path: string;
+    label: string;
+    color: string;
+    width: string;
+    selected: boolean;
+  }[] = [
+    {
+      path: 'https://at.nothing.tech/cdn/shop/products/milk-2.png?v=1709369790',
+      label: 'Image 1',
+      color: 'white',
+      width: '900px',
+      selected: true,
+    },
+    {
+      path: 'https://in.nothing.tech/cdn/shop/files/black-1.png?v=1714201997',
+      label: 'Image 2',
+      color: 'black',
+      width: '900px',
+      selected: false,
+    },
+    {
+      path: 'https://in.nothing.tech/cdn/shop/files/1_GlyphON.png?v=1716976380',
+      label: 'Image 3',
+      color: '#535A5E',
+      width: '900px',
+      selected: false,
+    },
+  ];
+  currentImage: { path: string; width: string } = this.images[0];
+  setImage(image: { path: string; width: string; selected: boolean }): void {
+    this.images.forEach((img) => (img.selected = false));
+    image.selected = true;
+    this.currentImage = image;
+  }
+
+  ngOnInit(): void {
+    // functions calls
+
+    this.hideAnimatedDiv();
+
+    // functions calls
 
     let shop: number = window.pageYOffset;
-
     window.onscroll = () => {
       const currentScroll: number = window.pageYOffset;
       if (shop > currentScroll) {
@@ -56,10 +108,7 @@ export class Phone2aComponent {
       }
       shop = currentScroll;
     };
-
     let myIndex: number = 0;
-
-    carousel();
     function carousel(): void {
       let i: number;
       const x = document.getElementsByClassName(
@@ -76,6 +125,7 @@ export class Phone2aComponent {
 
       setTimeout(carousel, 3000);
     }
+    carousel();
   }
 
   hideAnimatedDiv(): void {
@@ -90,7 +140,4 @@ export class Phone2aComponent {
       videodes.style.display = 'block';
     }, 6000);
   }
-}
-function carousel() {
-  throw new Error('Function not implemented.');
 }

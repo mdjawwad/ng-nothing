@@ -61,7 +61,7 @@ section:nth-of-type(2) .div1 {
   max-width: calc(100% - 4rem);
   position: fixed;
   top: 27%;
-  left: 35%;
+  left: 37%;
   overflow: hidden;
   translate: -50% -50%;
   opacity: 0;
@@ -204,7 +204,7 @@ svg text {
 
 @keyframes blow-out {
   to {
-    transform: translate3d(00.8ch,  50%, 100vh);
+    transform: translate3d(00ch,  0%, 100vh);
   }
 }
 

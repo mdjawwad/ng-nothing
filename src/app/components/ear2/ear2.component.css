@@ -1,39 +1,34 @@
 .ear-a-conatiner {
   width: 100%;
 
-  height: 70vh;
-  margin-top: 4rem;
+  height: 80vh;
+ 
 }
 .ear-a-conatiner .wrapper {
   display: flex;
   width: 100%;
-  padding: 0 8rem;
   height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-
   background-color: #f2f0f4;
   align-items: center;
   justify-content: space-between;
 }
 .wrapper .earbods {
   width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  margin-top: 2rem;
   overflow: hidden;
+  display: flex;
+  justify-content:  center;
 }
-
-.wrapper .earbods img {
+.earbods img{
   margin-left: 15rem;
-  width: 500px !important;
 }
 .des1 {
   width: 400px !important;
   color: rgb(0, 0, 0);
+  margin-top: 2rem;
+
   height: 100%;
-  display: none;
+  display: block;
 }
 .des1 h1 {
   font-size: 4rem;
@@ -95,27 +90,22 @@
   font-size: 1.3rem;
   margin-right: 2rem;
 }
-.color1 {
+.colors button {
   width: 40px;
-  margin-right: 1rem;
   height: 40px;
   cursor: pointer;
-  background-color: rgb(0, 0, 0);
+  outline: solid rgba(40, 38, 38, 0.551) 1px;
+  border: none;
   border-radius: 50%;
-  outline: rgb(59, 51, 51);
-  border: rgb(255, 0, 0) solid 1px;
-  padding: 1px;
+  margin-right: 0.4rem;
+  position: relative;
 }
-.color2 {
-  cursor: pointer;
-
-  width: 40px;
-  height: 40px;
-  margin-right: 1rem;
-
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  border: rgb(184, 171, 171) solid 1px;
+button span {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  font-size: 15px;
+  color: rgb(250, 53, 53);
 }
 
 .rate {
@@ -126,6 +116,7 @@
 }
 .rate span {
   font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
 .rate button {
@@ -145,7 +136,7 @@
 
 @media screen and (max-width: 1025px) {
   .ear-a-conatiner .wrapper {
-    height: 100vh;
+ 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -350,14 +341,6 @@ li p {
     height: 100%;
 
     margin-top: -5rem;
-  }
-  .color1,
-  .color2 {
-    margin: 0;
-    padding: 0;
-    width: 35px;
-    margin-right: 0.5rem;
-    height: 35px;
   }
 
   .colors h5 {

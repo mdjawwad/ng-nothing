@@ -5,19 +5,8 @@
     </div>
     <div class="phonsImg">
       <img
-        src="https://at.nothing.tech/cdn/shop/products/milk-2.png?v=1709369790"
-        alt=""
-      />
-      <img
-        src="https://in.nothing.tech/cdn/shop/files/black-1.png?v=1714201997"
-        alt=""
-      />
-      <img
-        src="https://in.nothing.tech/cdn/shop/files/1_GlyphON.png?v=1716976380"
-        alt=""
-      />
-      <img
-        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1714478864/Croma%20Assets/Communication/Mobiles/Images/306594_7_prvear.png?tr=w-640"
+        [src]="currentImage.path"
+        [style.width]="currentImage.width"
         alt=""
       />
     </div>
@@ -59,8 +48,7 @@
     </div>
   </div>
 </div>
-  <app-phone2a-all-in></app-phone2a-all-in> 
-
+<app-phone2a-all-in></app-phone2a-all-in>
 
 <div class="gopro-container">
   <div class="video-text" id="video-text">
@@ -72,30 +60,40 @@
   </div>
   <div class="video">
     <span id="go-title"> Go. Pro. </span>
-    <video
-      autoplay
-      muted
-      src="//in.nothing.tech/cdn/shop/videos/c/vp/44205b7357684e49b3ec44df23d98904/44205b7357684e49b3ec44df23d98904.HD-1080p-7.2Mbps-25368272.mp4?v=0"
-    ></video>
+    <video #productVideo muted>
+      <source
+        src="//in.nothing.tech/cdn/shop/videos/c/vp/44205b7357684e49b3ec44df23d98904/44205b7357684e49b3ec44df23d98904.HD-1080p-7.2Mbps-25368272.mp4?v=0"
+        type="video/mp4"
+      />
+    </video>
   </div>
 </div>
+
 <!-- <app-camara-view></app-camara-view> -->
-<app-zoom-out></app-zoom-out>
- 
+<!-- <app-zoom-out></app-zoom-out> -->
 <app-image-slider></app-image-slider>
 <app-img-grid></app-img-grid>
+
+
+
+<!-- custom shopping bar -->
 <div id="shopbar">
   <div class="shop-container">
     <div class="colors">
       <h5>Available Colors</h5>
-      <div class="color1"></div>
-      <div class="color2"></div>
-      <div class="color3"></div>
-      <div class="color4"></div>
+
+      <div *ngFor="let image of images">
+        <button
+          (click)="setImage(image)"
+          [ngStyle]="{ 'background-color': image.color }"
+        >
+          <span *ngIf="image.selected">✔</span>
+        </button>
+      </div>
     </div>
     <div class="rate">
       <span> ₹ 27,999.00 </span>
       <button><a routerLink="/login">SIGN UP</a></button>
     </div>
   </div>
-</div> 
+</div>

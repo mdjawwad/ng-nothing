@@ -5,11 +5,8 @@
     </div>
     <div class="earbods">
       <img
-        src=" https://cdn.shopifycdn.net/s/files/1/0692/5988/6904/files/ELEV_AZU_BL_040_230630_v001_1060.png?v=1688527589"
-        alt=""
-      />
-      <img
-        src="https://cdn.shopifycdn.net/s/files/1/0692/5988/6904/files/ELEV_AZU_070_230201.1060.png?v=1678873539"
+        [src]="currentImage.path"
+        [style.width]="currentImage.width"
         alt=""
       />
     </div>
@@ -31,7 +28,7 @@
   </div>
 </div>
 
-<section>
+  <section>
   <div class="slider-container">
     <div class="slider-title">
       <h1>Let’s go yellow</h1>
@@ -42,13 +39,13 @@
           <img
             src=" https://in.nothing.tech/cdn/shop/files/form_1244x.png?v=1713322273"
           />
-          <!-- <div class="slider-text">
+          <div class="slider-text">
             <p>
               With its raised contour and bubble-like appearance, the case for
               <br />
               Ear (a) takes inspiration from everyday pill packets.
             </p>
-          </div> -->
+          </div>
         </li>
         <li>
           <video
@@ -57,7 +54,7 @@
             loop
             src="https://cdn.shopify.com/videos/c/o/v/ee43edf418204d8c967672477b24b314.mp4"
           ></video>
-          <!-- <div class="slider-text">
+          <div class="slider-text">
             <p>
               With transparency, our products showcase the inner workings of
               <br />
@@ -69,14 +66,14 @@
               product,<br />
               capable of producing a sound that’s just as bright.
             </p>
-          </div> -->
+          </div>
         </li>
 
         <li>
           <img
             src=" https://in.nothing.tech/cdn/shop/files/tactility-mob_ff6338d3-6a86-4013-bd85-13240047928a_1244x.png?v=1713322361"
           />
-          <!-- <div class="slider-text">
+          <div class="slider-text">
             <p>
               Featuring soft contours with a slimmer rectangular format. Extra
               <br />
@@ -86,7 +83,7 @@
               <br />
               per earbud.
             </p>
-          </div> -->
+          </div>
         </li>
       </ul>
       <div class="slider-btn">
@@ -122,15 +119,21 @@
     </div>
   </div>
 </section>
-<app-sshhh></app-sshhh>
+<app-sshhh></app-sshhh>  
 
 <div id="shopbar">
   <div class="shop-container">
     <div class="colors">
       <h5>Available Colors</h5>
-      <div class="small-images">
-        <div class="color1"></div>
-        <div class="color2"></div>
+      <div class="small-images ">
+        <div *ngFor="let image of images">
+          <button
+            (click)="setImage(image)"
+            [ngStyle]="{ 'background-color': image.color }"
+          >
+            <span *ngIf="image.selected">✔</span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="rate">
