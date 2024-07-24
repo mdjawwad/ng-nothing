@@ -1,6 +1,7 @@
 import { style } from '@angular/animations';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { filter } from 'rxjs';
 // import { Document, HTMLElement } from 'docu';
 
 @Component({
@@ -11,9 +12,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  profile = document.getElementsByClassName('profile');
+ 
+ 
   ngOnInit(): void {
-
+ 
 // Toggle to show and hide navbar menu
 const navbarMenu = document.getElementById("menu") as HTMLElement;
 const burgerMenu = document.getElementById("burger") as HTMLElement;
@@ -28,7 +30,8 @@ const dropdown = document.querySelectorAll(".dropdown");
 
 dropdown.forEach((item) => {
   const dropdownToggle = item.querySelector(".dropdown-toggle") as HTMLElement;
-
+ 
+ 
   dropdownToggle.addEventListener("click", () => {
     const dropdownShow = document.querySelector(".dropdown-show");
     toggleDropdownItem(item);
@@ -78,6 +81,9 @@ window.addEventListener("resize", () => {
 });
 
 
+
+
+
 ///
 
     let prevScrollpos: number = window.pageYOffset;
@@ -94,4 +100,8 @@ window.addEventListener("resize", () => {
 
    
   }
+
+  
+ 
+
 }

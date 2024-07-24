@@ -59,18 +59,19 @@ h3 {
   }
   .arrow
   {
-    margin: 0;
+    margin: 2rem 0 0 0 ;
     padding: 0;
     width: 100%;
   }
   .arrow h1{
     width: 100%;
     font-size: 3.5rem;
+    margin-bottom: .5rem;
 
   }
   .arrow h3{
-    width: 100%;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 1rem;
 
   }
   .img{

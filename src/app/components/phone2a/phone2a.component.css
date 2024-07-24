@@ -225,7 +225,7 @@ button span {
     color: white;
   }
   .text span {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
   }
   .wrapper {
     height: inherit;
@@ -248,18 +248,28 @@ button span {
     justify-content: center;
     background-color: #000;
     height: 100% !important;
+   
   }
   .video video {
-    width: 1000px !important;
+    width: 900px !important;
     height: 100% !important;
   }
   .video-text {
-    left: 50%;
+    overflow: hidden;
+   
+ left: 51%;
     top: 20%;
+    width: 80%;
+  }
+  .video-text h4{
+    width: 80%;
+ 
+    font-size: 1rem;
   }
 
   #shopbar {
     height: 140px;
+    overflow: hidden;
   }
 
   .colors {

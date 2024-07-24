@@ -24,35 +24,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './phone2a.component.html',
   styleUrl: './phone2a.component.css',
 })
-export class Phone2aComponent implements AfterViewInit {
+export class Phone2aComponent {
   // autoplay video
-  @ViewChild('productVideo', { static: false })
-  productVideo!: ElementRef<HTMLVideoElement>;
-
-  ngAfterViewInit() {
-    const videoElement = this.productVideo.nativeElement;
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          videoElement.play();
-        } else {
-          videoElement.pause();
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-    observer.observe(videoElement);
-  }
+   
 
   // product image change
   images: {
@@ -108,6 +82,8 @@ export class Phone2aComponent implements AfterViewInit {
       }
       shop = currentScroll;
     };
+
+    
     let myIndex: number = 0;
     function carousel(): void {
       let i: number;

@@ -8,22 +8,18 @@
         algorithms that bring to life intricate details in each and every shot.
       </h3>
 
-      <div class="comparison-slider-wrapper">
-        <div class="comparison-slider">
-          <div class="overlay">And I am the <strong>after</strong> image.</div>
-          <img
-            src="https://in.nothing.tech/cdn/shop/files/After-3_1720x.jpg?v=1709461428"
-            alt="marioPhoto 2"
-          />
-          <div class="resize">
-            <div class="overlay">I am the <strong>before</strong> image.</div>
-            <img
-              src="https://in.nothing.tech/cdn/shop/files/Before-2_1720x.jpg?v=1709461427"
-              alt="marioPhoto 1"
-            />
-          </div>
-          <div class="divider"></div>
-        </div>
+      <div id="comparison">
+        <figure>
+          <div id="divisor"></div>
+        </figure>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          id="slider"
+          oninput="moveDivisor()"
+        />
       </div>
 
       <div class="split">
@@ -38,6 +34,3 @@
     </div>
   </div>
 </div>
-
-
-
