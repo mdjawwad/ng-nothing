@@ -50,6 +50,7 @@ li {
   text-wrap: pretty;
   line-height: inherit;
   word-wrap: break-word;
+  margin: .5rem 0 0 0;
 }
 
 img,
@@ -372,7 +373,6 @@ svg {
     height: max-content;
     pointer-events: none;
     background-color: rgb(255, 255, 255);
-
     box-shadow: var(--shadow-large);
     transition: top 0.4s, opacity 0.3s ease;
   }
