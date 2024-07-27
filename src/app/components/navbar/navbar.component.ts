@@ -12,18 +12,26 @@ import { filter } from 'rxjs';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
- 
- 
+  constructor(private router: Router) {}
   ngOnInit(): void {
- 
-// Toggle to show and hide navbar menu
-const navbarMenu = document.getElementById("menu") as HTMLElement;
-const burgerMenu = document.getElementById("burger") as HTMLElement;
+    
+    // Toggle to show and hide navbar menu
+    const navbarMenu = document.getElementById("menu") as HTMLElement;
+    const burgerMenu = document.getElementById("burger") as HTMLElement;
+    
+    burgerMenu.addEventListener("click", () => {
+      navbarMenu.classList.toggle("is-active");
+      burgerMenu.classList.toggle("is-active");
+    });
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        navbarMenu.classList.remove("is-active");
+        burgerMenu.classList.remove("is-active")
+    
+      }
+    });
 
-burgerMenu.addEventListener("click", () => {
-  navbarMenu.classList.toggle("is-active");
-  burgerMenu.classList.toggle("is-active");
-});
+ 
 
 // Toggle to show and hide dropdown menu
 const dropdown = document.querySelectorAll(".dropdown");

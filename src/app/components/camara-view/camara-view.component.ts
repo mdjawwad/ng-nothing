@@ -11,8 +11,6 @@ import { Component } from '@angular/core';
 })
 export class CamaraViewComponent {
   ngOnInit(): void {
- 
-
     fromEvent(window, 'scroll')
       .pipe(
         map(() => window.pageYOffset),
@@ -27,6 +25,5 @@ export class CamaraViewComponent {
           Object.assign(zoomElement.style, styles);
         }
       });
-     
   }
 }

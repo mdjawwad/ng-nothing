@@ -464,18 +464,4 @@ svg {
   }
 }
 
-/* @media screen and (max-width: 470px) {
-  .header {
-    width: 100% !important;
-    padding: 0 1rem;
-  }
-
-  .profile {
-    width: 25%;
-
-    display: flex;
-    justify-content: space-between;
-
-    align-items: center;
-  }
-} */
+ 
