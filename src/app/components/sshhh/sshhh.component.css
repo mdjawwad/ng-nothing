@@ -18,12 +18,11 @@
 .dim h1 {
   font-size: 40rem;
   cursor: default;
-
-  margin-left: 8rem;
+ 
 }
 .dim h2 {
   font-size: 40rem;
-  margin-left: 35rem;
+ text-align: right;
   cursor: default;
 
 }

@@ -75,9 +75,10 @@ svg {
   image-rendering: -webkit-optimize-contrast;
 }
 
-.section {
+.section   {
   margin-inline: auto;
   margin-block: 5rem 2rem;
+  
 }
 
 .container {
